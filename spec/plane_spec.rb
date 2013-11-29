@@ -14,12 +14,19 @@ describe Plane do
   end
   
   it 'has a flying status when in the air' do
-  	
+  	# now, i want the flying status to indicate that it is in the air?
+  	plane.in_the_air
+  	expect(plane.flying?).to be_true
   end
   
   it 'can take off' do
+  	# can the plane take off be true?
+  	expect(plane.takeoff).to be_true
   end
   
   it 'changes its status to flying after taking of' do
+  	# change status to "FLYING" once takeoff
+  	plane.takeoff
+  	expect(plane.status).to eq("flying")
   end
 end

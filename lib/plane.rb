@@ -7,4 +7,17 @@ class Plane
 	def flying?
 		@flying
 	end
+
+	def in_the_air
+		@flying = true
+	end
+
+	def takeoff
+		@flying = true
+	end
+
+	def status
+	return "flying" if @flying
+	return "on ground"
+	end
 end
